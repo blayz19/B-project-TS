@@ -1,10 +1,14 @@
 import { createRouter,createWebHistory } from 'vue-router';
-import Testing from './components/Testing.vue';
-import Test from './components/Test.vue';
+
 
 
 export const router = createRouter({
     routes:[
+        {
+            path: '/:pathMatch(.*)*/:pathMatch1(.*)*',
+            component: () => import('./views/NotFoundView.vue'),
+            name: 'NotFound',
+        },
         {
             path: '/',
             component: () => import('./views/AuthView.vue'),
@@ -14,12 +18,13 @@ export const router = createRouter({
             component: () => import('./views/MainView.vue'),
             children:[
                 {
-                    path: 'development',
+                    path: '',
                     name:'main',
-                    component: Test,
+                    component: () => import('./views/IndexView.vue'),
                 },
                 {
-                    path: 'new', component: Testing,
+                    path: ':alias', 
+                    component: () => import('./views/CategoryView.vue'),
                 },
             ]
         },

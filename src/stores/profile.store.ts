@@ -10,6 +10,7 @@ export const useProfileStore = defineStore('profile', () =>{
     async function fetchProfile() {
         const {data} = await http.get<Profile>(API_ROUTES.profile)
         profile.value = data;
+        profile.value.name="Олег";
     }
 
     return {profile, fetchProfile};

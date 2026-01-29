@@ -24,6 +24,6 @@
     margin:140px auto 0 auto;
   }
   .nav{
-    min-width: 400px;
+    min-width: 300px;
   }
 </style>

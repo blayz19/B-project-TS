@@ -6,7 +6,6 @@
     
     onMounted(()=>{
         store.fetchProfile();
-        console.log(store);
     })
 </script>
 

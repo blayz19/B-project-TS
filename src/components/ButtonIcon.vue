@@ -12,7 +12,6 @@
 
 <style scoped>
     .button{
-        margin-top: 16px;
         border-radius: 50%;
         width:32px ;
         height:32px;

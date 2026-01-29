@@ -13,10 +13,13 @@ import PlusIcon from '@/icons/PlusIcon.vue';
 <template>
     <ul class="category-list">
         <li class="list"v-for="item in store.categories" :key="item.id">
-            <RouterLink :to="`/main/${item.alias}`">{{ item.name }}</RouterLink>
+            <RouterLink active-class="active-link" :to="`/main/${item.alias}`">{{ item.name }}</RouterLink>
+        </li>
+        <li>
+            <ButtonIcon @click="store.createCategory"><PlusIcon></PlusIcon></ButtonIcon>
         </li>
     </ul>
-    <ButtonIcon @click="store.createCategory"><PlusIcon></PlusIcon></ButtonIcon>
+    
 </template>
 
 <style scoped>
@@ -26,6 +29,7 @@ import PlusIcon from '@/icons/PlusIcon.vue';
         gap:34px;
         margin: 0;
         padding: 0;
+        list-style: none;
     }
     .list{
         list-style: none;
@@ -38,6 +42,10 @@ import PlusIcon from '@/icons/PlusIcon.vue';
         color: var(--color-fg)
     }
     .list a:hover{
+        font-size: 24px;
+        font-weight: 700;
+    }
+    .list a.active-link{
         font-size: 24px;
         font-weight: 700;
     }
