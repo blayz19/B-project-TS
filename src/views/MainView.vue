@@ -6,11 +6,11 @@
 <template>
     <div class="app">
         <nav class="nav">
-        <ProfileAvatar> </ProfileAvatar>
-        <CategoryList></CategoryList>
+          <ProfileAvatar> </ProfileAvatar>
+          <CategoryList></CategoryList>
         </nav>
         <main>
-        <RouterView />
+          <RouterView />
         </main>
     </div>
 </template>
@@ -25,5 +25,8 @@
   }
   .nav{
     min-width: 300px;
+  }
+  main{
+    width: 100%;
   }
 </style>

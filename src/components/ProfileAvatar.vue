@@ -11,7 +11,7 @@
 
 <template>
     <div class="profile-avatar" v-if="store.profile">
-        <img class="avatar-image"src="../../public/avatar.png" alt = "Изображение пользователя" />
+        <img class="avatar-image"src="../../public/avatar2.jpg" alt = "Изображение пользователя" />
         <div>Привет, <strong>{{ store.profile?.name }}</strong></div>
     </div>
     
